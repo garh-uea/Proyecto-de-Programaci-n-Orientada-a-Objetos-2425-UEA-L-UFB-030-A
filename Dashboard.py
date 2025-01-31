@@ -138,6 +138,24 @@ def menu_semana_6():
             print("Opción no válida. Intente nuevamente.")
 
 
+def menu_semana_7():
+    while True:
+        print("\nSemana 7: Constructores y Destructores")
+        print("1. Mostrar código del programa: Constructores_Destructores")
+        print("2. Ejecutar programa: Constructores_Destructores")
+        print("3. Volver al menú principal")
+
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            mostrar_codigo_semana_7()
+        elif opcion == "2":
+            ejecutar_programa_semana_7()
+        elif opcion == "3":
+            break
+        else:
+            print("Opción no válida. Intente nuevamente.")
+
 
 def mostrar_codigo_semana_2():
     ruta_archivo = os.path.join("Semana 2/Técnicas de Programación", "Técnicas de Programación.py")
@@ -229,6 +247,21 @@ def mostrar_codigo_semana_6():
     except IOError:
         print("Error: No se pudo leer el archivo")
 
+
+def mostrar_codigo_semana_7():
+    ruta_archivo = os.path.join("Semana 7/Constructores y Destructores", "Constructores_Destructores.py")
+    try:
+        with open(ruta_archivo, "r") as archivo:
+            contenido = archivo.read()
+            print("\n# Código: Constructores_Destructores")
+            print(contenido)
+    except FileNotFoundError:
+        print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
+    except IOError:
+        print("Error: No se pudo leer el archivo")
+
+
+
 def ejecutar_programa_semana_2():
     ruta_archivo = os.path.join("Semana 2/Técnicas de Programación", "Técnicas de Programación.py")
     try:
@@ -296,6 +329,15 @@ def ejecutar_programa_semana_6():
     except FileNotFoundError:
         print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
 
+
+def ejecutar_programa_semana_7():
+    ruta_archivo = os.path.join("Semana 7/Constructores y Destructores", "Constructores_Destructores.py")
+    try:
+        subprocess.run(["python", ruta_archivo], check=True)
+    except subprocess.CalledProcessError:
+        print("Error: Hubo un problema al ejecutar el programa")
+    except FileNotFoundError:
+        print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
 
 if __name__ == "__main__":
     mostrar_menu()
