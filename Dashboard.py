@@ -1,5 +1,6 @@
 import os
 import subprocess
+import platform
 
 def mostrar_menu():
     while True:
@@ -35,17 +36,20 @@ def mostrar_menu():
 def menu_semana_2():
     while True:
         print("\nSemana 2: Técnicas de programación")
-        print("1. Mostrar código del programa")
-        print("2. Ejecutar programa")
-        print("3. Volver al menú principal")
+        print("1. Mostrar Documentación del Tema")
+        print("2. Mostrar código del programa")
+        print("3. Ejecutar programa")
+        print("4. Volver al menú principal")
 
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
-            mostrar_codigo_semana_2()
-        elif opcion == "2":
-            ejecutar_programa_semana_2()
+            mostrar_semana_2(opcion)
+        if opcion == "2":
+            mostrar_semana_2(opcion)
         elif opcion == "3":
+            ejecutar_programa_semana_2()
+        elif opcion == "4":
             break
         else:
             print("Opción no válida. Intente nuevamente.")
@@ -53,23 +57,26 @@ def menu_semana_2():
 def menu_semana_3():
     while True:
         print("\nSemana 3: POO frente a la programación tradicional")
-        print("1. Mostrar código de Programa de Control de Temperaturas en POO")
-        print("2. Mostrar código de Programa de Control de Temperaturas en Programación Tradicional")
-        print("3. Ejecutar Programa de Control de Temperaturas en POO")
-        print("4. Ejecutar Programa de Control de Temperaturas en Programación Tradicional")
-        print("5. Volver al menú principal")
+        print("1. Mostrar Documentación del Tema")
+        print("2. Mostrar código de Programa de Control de Temperaturas en POO")
+        print("3. Mostrar código de Programa de Control de Temperaturas en Programación Tradicional")
+        print("4. Ejecutar Programa de Control de Temperaturas en POO")
+        print("5. Ejecutar Programa de Control de Temperaturas en Programación Tradicional")
+        print("6. Volver al menú principal")
 
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
-            mostrar_codigo_semana_3(opcion)
+            mostrar_semana_3(opcion)
         elif opcion == "2":
-            mostrar_codigo_semana_3(opcion)
+            mostrar_semana_3(opcion)
         elif opcion == "3":
-            ejecutar_programa_semana_3(opcion)
+            mostrar_semana_3(opcion)
         elif opcion == "4":
             ejecutar_programa_semana_3(opcion)
         elif opcion == "5":
+            ejecutar_programa_semana_3(opcion)
+        elif opcion == "6":
             break
         else:
             print("Opción no válida. Intente nuevamente.")
@@ -157,22 +164,56 @@ def menu_semana_7():
             print("Opción no válida. Intente nuevamente.")
 
 
-def mostrar_codigo_semana_2():
-    ruta_archivo = os.path.join("Semana 2/Técnicas de Programación", "Técnicas de Programación.py")
-    try:
-        with open(ruta_archivo, "r", encoding="utf-8") as archivo:
-            contenido = archivo.read()
-            print("\n************************************************ Código: Técnicas de programación ************************************************")
-            print(contenido)
-            print("\n********************************************************* Fin del Código *********************************************************")
-    except FileNotFoundError:
-        print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
-    except IOError:
-        print("Error: No se pudo leer el archivo")
-
-
-def mostrar_codigo_semana_3(opcion):
+def mostrar_semana_2(opcion):
     if opcion == "1":
+        ruta_archivo = os.path.join("Semana 2/Técnicas de Programación", "Técnicas de Programación.pdf")
+        try:
+            if platform.system() == "Darwin":  # macOS
+                subprocess.run(["open", ruta_archivo])
+            elif platform.system() == "Windows":
+                os.startfile(ruta_archivo)
+            else:  # Linux y otros
+                subprocess.run(["xdg-open", ruta_archivo])
+            print(f"\nSe ha abierto el archivo PDF: {ruta_archivo}")
+        except FileNotFoundError:
+            print(f"Error: No se encontró el archivo PDF en la ruta {ruta_archivo}")
+        except Exception as e:
+            print(f"Error al abrir el PDF: {e}")
+
+    elif opcion == "2":
+        ruta_archivo = os.path.join("Semana 2/Técnicas de Programación", "Técnicas de Programación.py")
+        try:
+            with open(ruta_archivo, "r", encoding="utf-8") as archivo:
+                contenido = archivo.read()
+                print(
+                    "\n************************************************ Código: Técnicas de programación ************************************************")
+                print(contenido)
+                print(
+                    "\n********************************************************* Fin del Código *********************************************************")
+        except FileNotFoundError:
+            print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
+        except IOError:
+            print("Error: No se pudo leer el archivo")
+
+
+def mostrar_semana_3(opcion):
+    if opcion == "1":
+        ruta_archivo = os.path.join("Semana 3/POO frente a la programación tradicional", "POO frente a la programación tradicional.pdf")
+        try:
+            if platform.system() == "Darwin":  # macOS
+                subprocess.run(["open", ruta_archivo])
+            elif platform.system() == "Windows":
+                os.startfile(ruta_archivo)
+            else:  # Linux y otros
+                subprocess.run(["xdg-open", ruta_archivo])
+            print(f"\nSe ha abierto el archivo PDF: {ruta_archivo}")
+        except FileNotFoundError:
+            print(f"Error: No se encontró el archivo PDF en la ruta {ruta_archivo}")
+        except Exception as e:
+            print(f"Error al abrir el PDF: {e}")
+
+    elif opcion == "2":
+
         ruta_archivo = os.path.join("Semana 3/POO frente a la programación tradicional", "Temperaturas - POO.py")
         try:
             with open(ruta_archivo, "r", encoding="utf-8") as archivo:
@@ -185,7 +226,7 @@ def mostrar_codigo_semana_3(opcion):
         except IOError:
             print("Error: No se pudo leer el archivo")
 
-    elif opcion == "2":
+    elif opcion == "3":
         ruta_archivo = os.path.join("Semana 3/POO frente a la programación tradicional", "Temperaturas - Programación Tradicional.py")
         try:
             with open(ruta_archivo, "r", encoding="utf-8") as archivo:
@@ -281,7 +322,7 @@ def ejecutar_programa_semana_2():
 
 
 def ejecutar_programa_semana_3(opcion):
-    if opcion == "3":
+    if opcion == "4":
         ruta_archivo = os.path.join("Semana 3/POO frente a la programación tradicional", "Temperaturas - POO.py")
         try:
             subprocess.run(["python", ruta_archivo], check=True)
@@ -289,7 +330,7 @@ def ejecutar_programa_semana_3(opcion):
             print("Error: Hubo un problema al ejecutar el programa")
         except FileNotFoundError:
             print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
-    elif opcion == "4":
+    elif opcion == "5":
         ruta_archivo = os.path.join("Semana 3/POO frente a la programación tradicional", "Temperaturas - Programación Tradicional.py")
         try:
             subprocess.run(["python", ruta_archivo], check=True)
