@@ -160,10 +160,11 @@ def menu_semana_7():
 def mostrar_codigo_semana_2():
     ruta_archivo = os.path.join("Semana 2/Técnicas de Programación", "Técnicas de Programación.py")
     try:
-        with open(ruta_archivo, "r") as archivo:
+        with open(ruta_archivo, "r", encoding="utf-8") as archivo:
             contenido = archivo.read()
-            print("\n# Código: Técnicas de programación")
+            print("\n************************************************ Código: Técnicas de programación ************************************************")
             print(contenido)
+            print("\n********************************************************* Fin del Código *********************************************************")
     except FileNotFoundError:
         print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
     except IOError:
@@ -174,10 +175,11 @@ def mostrar_codigo_semana_3(opcion):
     if opcion == "1":
         ruta_archivo = os.path.join("Semana 3/POO frente a la programación tradicional", "Temperaturas - POO.py")
         try:
-            with open(ruta_archivo, "r") as archivo:
+            with open(ruta_archivo, "r", encoding="utf-8") as archivo:
                 contenido = archivo.read()
-                print("\n# Código: Temperaturas - POO")
+                print("\n************************************************ Código: Temperaturas - POO ************************************************")
                 print(contenido)
+                print("\n********************************************************* Fin del Código *********************************************************")
         except FileNotFoundError:
             print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
         except IOError:
@@ -186,10 +188,11 @@ def mostrar_codigo_semana_3(opcion):
     elif opcion == "2":
         ruta_archivo = os.path.join("Semana 3/POO frente a la programación tradicional", "Temperaturas - Programación Tradicional.py")
         try:
-            with open(ruta_archivo, "r") as archivo:
+            with open(ruta_archivo, "r", encoding="utf-8") as archivo:
                 contenido = archivo.read()
-                print("\n# Código: Temperaturas - Programación Tradicional")
+                print("\n************************************************ Código: Temperaturas - Programación Tradicional ************************************************")
                 print(contenido)
+                print("\n********************************************************* Fin del Código *********************************************************")
         except FileNotFoundError:
             print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
         except IOError:
@@ -200,10 +203,11 @@ def mostrar_codigo_semana_4(opcion):
     if opcion == "1":
         ruta_archivo = os.path.join("Semana 4/Caracteristicas de la POO - Ejemplos del Mundo Real", "Cuenta_Bancaria_POO.py")
         try:
-            with open(ruta_archivo, "r") as archivo:
+            with open(ruta_archivo, "r", encoding="utf-8") as archivo:
                 contenido = archivo.read()
-                print("\n# Código: Cuenta_Bancaria_POO")
+                print("\n************************************************ Código: Cuenta_Bancaria_POO ************************************************")
                 print(contenido)
+                print("\n********************************************************* Fin del Código *********************************************************")
         except FileNotFoundError:
             print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
         except IOError:
@@ -212,10 +216,11 @@ def mostrar_codigo_semana_4(opcion):
     elif opcion == "2":
         ruta_archivo = os.path.join("Semana 4/Caracteristicas de la POO - Ejemplos del Mundo Real", "Tienda_Ropa_POO.py")
         try:
-            with open(ruta_archivo, "r") as archivo:
+            with open(ruta_archivo, "r", encoding="utf-8") as archivo:
                 contenido = archivo.read()
-                print("\n# Código: Técnicas de programación")
+                print("\n************************************************ Código: Tienda Ropa POO ************************************************")
                 print(contenido)
+                print("\n********************************************************* Fin del Código *********************************************************")
         except FileNotFoundError:
             print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
         except IOError:
@@ -225,10 +230,11 @@ def mostrar_codigo_semana_4(opcion):
 def mostrar_codigo_semana_5():
     ruta_archivo = os.path.join("Semana 5/Tipos de datos, Identificadores", "Sistema_Registro.py")
     try:
-        with open(ruta_archivo, "r") as archivo:
+        with open(ruta_archivo, "r", encoding="utf-8") as archivo:
             contenido = archivo.read()
-            print("\n# Código: Sistema_Registro")
+            print("\n************************************************ Código: Sistema_Registro ************************************************")
             print(contenido)
+            print("\n********************************************************* Fin del Código *********************************************************")
     except FileNotFoundError:
         print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
     except IOError:
@@ -238,10 +244,11 @@ def mostrar_codigo_semana_5():
 def mostrar_codigo_semana_6():
     ruta_archivo = os.path.join("Semana 6/Objetos, clases, Herencia, Polimorfismo", "Tienda_Ropa_POO.py")
     try:
-        with open(ruta_archivo, "r") as archivo:
+        with open(ruta_archivo, "r", encoding="utf-8") as archivo:
             contenido = archivo.read()
-            print("\n# Código: Tienda_Ropa_POO")
+            print("\n************************************************ Código: Tienda_Ropa_POO ************************************************")
             print(contenido)
+            print("\n********************************************************* Fin del Código *********************************************************")
     except FileNotFoundError:
         print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
     except IOError:
@@ -251,10 +258,11 @@ def mostrar_codigo_semana_6():
 def mostrar_codigo_semana_7():
     ruta_archivo = os.path.join("Semana 7/Constructores y Destructores", "Constructores_Destructores.py")
     try:
-        with open(ruta_archivo, "r") as archivo:
+        with open(ruta_archivo, "r", encoding="utf-8") as archivo:
             contenido = archivo.read()
-            print("\n# Código: Constructores_Destructores")
+            print("\n************************************************ Código: Constructores_Destructores ************************************************")
             print(contenido)
+            print("\n********************************************************* Fin del Código *********************************************************")
     except FileNotFoundError:
         print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
     except IOError:
