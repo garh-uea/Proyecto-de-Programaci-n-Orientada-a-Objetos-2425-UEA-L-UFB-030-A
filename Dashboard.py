@@ -4,14 +4,16 @@ import platform
 
 def mostrar_menu():
     while True:
-        print("\nMenú Principal")
-        print("1. Semana 2: Técnicas de programación")
-        print("2. Semana 3: POO frente a la programación tradicional")
-        print("3. Semana 4: Caracteristicas de la POO - Ejemplos del Mundo Real")
-        print("4. Semana 5: Tipos de datos, Identificadores")
-        print("5. Semana 6: Objetos, clases, Herencia, Polimorfismo")
-        print("6. Semana 7: Constructores y Destructores")
-        print("7. Salir")
+        print("\n****************************** Menú Principal *******************************")
+        print("* 1. Semana 2: Técnicas de programación                                      *")
+        print("* 2. Semana 3: POO frente a la programación tradicional                      *")
+        print("* 3. Semana 4: Caracteristicas de la POO - Ejemplos del Mundo Real           *")
+        print("* 4. Semana 5: Tipos de datos, Identificadores                               *")
+        print("* 5. Semana 6: Objetos, clases, Herencia, Polimorfismo                       *")
+        print("* 6. Semana 7: Constructores y Destructores                                  *")
+        print("* 7. Salir                                                                   *")
+        print("*****************************************************************************")
+
 
         opcion = input("Seleccione una opción: ")
 
