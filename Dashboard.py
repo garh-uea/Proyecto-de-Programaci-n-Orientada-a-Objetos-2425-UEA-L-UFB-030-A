@@ -135,17 +135,20 @@ def menu_semana_5():
 def menu_semana_6():
     while True:
         print("\nSemana 6: Objetos, clases, Herencia, Polimorfismo")
-        print("1. Mostrar código del programa: Tienda_Ropa_POO")
-        print("2. Ejecutar programa: Tienda_Ropa_POO")
-        print("3. Volver al menú principal")
+        print("1. Mostrar Documentación del Tema")
+        print("2. Mostrar código del programa: Tienda_Ropa_POO")
+        print("3. Ejecutar programa: Tienda_Ropa_POO")
+        print("4. Volver al menú principal")
 
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
-            mostrar_codigo_semana_6()
-        elif opcion == "2":
-            ejecutar_programa_semana_6()
+            mostrar_semana_6(opcion)
+        if opcion == "2":
+            mostrar_semana_6(opcion)
         elif opcion == "3":
+            ejecutar_programa_semana_6()
+        elif opcion == "4":
             break
         else:
             print("Opción no válida. Intente nuevamente.")
@@ -154,17 +157,20 @@ def menu_semana_6():
 def menu_semana_7():
     while True:
         print("\nSemana 7: Constructores y Destructores")
-        print("1. Mostrar código del programa: Constructores_Destructores")
-        print("2. Ejecutar programa: Constructores_Destructores")
-        print("3. Volver al menú principal")
+        print("1. Mostrar Documentación del Tema")
+        print("2. Mostrar código del programa: Constructores_Destructores")
+        print("3. Ejecutar programa: Constructores_Destructores")
+        print("4. Volver al menú principal")
 
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
-            mostrar_codigo_semana_7()
-        elif opcion == "2":
-            ejecutar_programa_semana_7()
+            mostrar_semana_7(opcion)
+        if opcion == "2":
+            mostrar_semana_7(opcion)
         elif opcion == "3":
+            ejecutar_programa_semana_7()
+        elif opcion == "4":
             break
         else:
             print("Opción no válida. Intente nuevamente.")
@@ -318,32 +324,64 @@ def mostrar_semana_5(opcion):
             print("Error: No se pudo leer el archivo")
 
 
-def mostrar_codigo_semana_6():
-    ruta_archivo = os.path.join("Semana 6/Objetos, clases, Herencia, Polimorfismo", "Tienda_Ropa_POO.py")
-    try:
-        with open(ruta_archivo, "r", encoding="utf-8") as archivo:
-            contenido = archivo.read()
-            print("\n************************************************ Código: Tienda_Ropa_POO ************************************************")
-            print(contenido)
-            print("\n********************************************************* Fin del Código *********************************************************")
-    except FileNotFoundError:
-        print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
-    except IOError:
-        print("Error: No se pudo leer el archivo")
+def mostrar_semana_6(opcion):
+    if opcion == "1":
+        ruta_archivo = os.path.join("Semana 6/Objetos, clases, Herencia, Polimorfismo", "Objetos, clases, Herencia, Polimorfismo.pdf")
+        try:
+            if platform.system() == "Darwin":  # macOS
+                subprocess.run(["open", ruta_archivo])
+            elif platform.system() == "Windows":
+                os.startfile(ruta_archivo)
+            else:  # Linux y otros
+                subprocess.run(["xdg-open", ruta_archivo])
+            print(f"\nSe ha abierto el archivo PDF: {ruta_archivo}")
+        except FileNotFoundError:
+            print(f"Error: No se encontró el archivo PDF en la ruta {ruta_archivo}")
+        except Exception as e:
+            print(f"Error al abrir el PDF: {e}")
+
+    elif opcion == "2":
+        ruta_archivo = os.path.join("Semana 6/Objetos, clases, Herencia, Polimorfismo", "Tienda_Ropa_POO.py")
+        try:
+            with open(ruta_archivo, "r", encoding="utf-8") as archivo:
+                contenido = archivo.read()
+                print("\n************************************************ Código: Tienda_Ropa_POO ************************************************")
+                print(contenido)
+                print("\n********************************************************* Fin del Código *********************************************************")
+        except FileNotFoundError:
+            print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
+        except IOError:
+            print("Error: No se pudo leer el archivo")
 
 
-def mostrar_codigo_semana_7():
-    ruta_archivo = os.path.join("Semana 7/Constructores y Destructores", "Constructores_Destructores.py")
-    try:
-        with open(ruta_archivo, "r", encoding="utf-8") as archivo:
-            contenido = archivo.read()
-            print("\n************************************************ Código: Constructores_Destructores ************************************************")
-            print(contenido)
-            print("\n********************************************************* Fin del Código *********************************************************")
-    except FileNotFoundError:
-        print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
-    except IOError:
-        print("Error: No se pudo leer el archivo")
+def mostrar_semana_7(opcion):
+    if opcion == "1":
+        ruta_archivo = os.path.join("Semana 7/Constructores y Destructores", "Constructores y Destructores.pdf")
+        try:
+            if platform.system() == "Darwin":  # macOS
+                subprocess.run(["open", ruta_archivo])
+            elif platform.system() == "Windows":
+                os.startfile(ruta_archivo)
+            else:  # Linux y otros
+                subprocess.run(["xdg-open", ruta_archivo])
+            print(f"\nSe ha abierto el archivo PDF: {ruta_archivo}")
+        except FileNotFoundError:
+            print(f"Error: No se encontró el archivo PDF en la ruta {ruta_archivo}")
+        except Exception as e:
+            print(f"Error al abrir el PDF: {e}")
+
+    elif opcion == "2":
+        ruta_archivo = os.path.join("Semana 7/Constructores y Destructores", "Constructores_Destructores.py")
+        try:
+            with open(ruta_archivo, "r", encoding="utf-8") as archivo:
+                contenido = archivo.read()
+                print("\n************************************************ Código: Constructores_Destructores ************************************************")
+                print(contenido)
+                print("\n********************************************************* Fin del Código *********************************************************")
+        except FileNotFoundError:
+            print(f"Error: No se encontró el archivo en la ruta {ruta_archivo}")
+        except IOError:
+            print("Error: No se pudo leer el archivo")
 
 
 
