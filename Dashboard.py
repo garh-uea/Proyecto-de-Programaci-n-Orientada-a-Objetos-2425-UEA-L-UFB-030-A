@@ -7,15 +7,15 @@ import platform
 def mostrar_menu():
     while True:
         # Impresión del menú principal
-        print("\n****************************** Menú Principal *******************************")
-        print("* 1. Semana 2: Técnicas de programación                                      *")
-        print("* 2. Semana 3: POO frente a la programación tradicional                      *")
-        print("* 3. Semana 4: Caracteristicas de la POO - Ejemplos del Mundo Real           *")
-        print("* 4. Semana 5: Tipos de datos, Identificadores                               *")
-        print("* 5. Semana 6: Objetos, clases, Herencia, Polimorfismo                       *")
-        print("* 6. Semana 7: Constructores y Destructores                                  *")
-        print("* 7. Salir                                                                   *")
-        print("*****************************************************************************")
+        print("\n************************************* Menú Principal *************************************")
+        print("* 1. Unidad I  - Semana 2: Técnicas de programación                                      *")
+        print("* 2. Unidad I  - Semana 3: POO frente a la programación tradicional                      *")
+        print("* 3. Unidad I  - Semana 4: Caracteristicas de la POO - Ejemplos del Mundo Real           *")
+        print("* 4. Unidad II - Semana 5: Tipos de datos, Identificadores                               *")
+        print("* 5. Unidad II - Semana 6: Objetos, clases, Herencia, Polimorfismo                       *")
+        print("* 6. Unidad II - Semana 7: Constructores y Destructores                                  *")
+        print("* 7. Salir                                                                               *")
+        print("******************************************************************************************")
 
         # Solicitar Opción al usuario
         opcion = input("Seleccione una opción: ")
@@ -43,7 +43,8 @@ def mostrar_menu():
 def menu_semana_2():
     while True:
         # Impresión del menú de la semana 2
-        print("\nSemana 2: Técnicas de programación")
+        print("\n***************************************** Unidad I *****************************************")
+        print("============================ Semana 2: Técnicas de programación ============================")
         print("1. Mostrar Documentación del Tema")
         print("2. Mostrar código del programa")
         print("3. Ejecutar programa")
@@ -68,7 +69,8 @@ def menu_semana_2():
 def menu_semana_3():
     while True:
         # Impresión del menú de la semana 3
-        print("\nSemana 3: POO frente a la programación tradicional")
+        print("\n***************************************** Unidad I *****************************************")
+        print("==================== Semana 3: POO frente a la programación tradicional ====================")
         print("1. Mostrar Documentación del Tema")
         print("2. Mostrar código de Programa de Control de Temperaturas en POO")
         print("3. Mostrar código de Programa de Control de Temperaturas en Programación Tradicional")
@@ -99,7 +101,8 @@ def menu_semana_3():
 def menu_semana_4():
     while True:
         # Impresión del menú de la semana 4
-        print("\nSemana 4: Caracteristicas de la POO - Ejemplos del Mundo Real")
+        print("\n***************************************** Unidad I *****************************************")
+        print("============== Semana 4: Caracteristicas de la POO - Ejemplos del Mundo Real ===============")
         print("1. Mostrar Documentación del Tema")
         print("2. Mostrar código de Programa de Cuenta Bancaria POO")
         print("3. Mostrar código de Programa de Tienda Ropa POO")
@@ -130,7 +133,8 @@ def menu_semana_4():
 def menu_semana_5():
     while True:
         # Impresión del menú de la semana 5
-        print("\nSemana 5: Tipos de datos, Identificadores")
+        print("\n***************************************** Unidad II *****************************************")
+        print("========================= Semana 5: Tipos de datos, Identificadores =========================")
         print("1. Mostrar Documentación del Tema")
         print("2. Mostrar código del programa: Sistema de Registro")
         print("3. Ejecutar programa: Sistema de Registro")
@@ -155,7 +159,8 @@ def menu_semana_5():
 def menu_semana_6():
     while True:
         # Impresión del menú de la semana 6
-        print("\nSemana 6: Objetos, clases, Herencia, Polimorfismo")
+        print("\n***************************************** Unidad II *****************************************")
+        print("===================== Semana 6: Objetos, clases, Herencia, Polimorfismo =====================")
         print("1. Mostrar Documentación del Tema")
         print("2. Mostrar código del programa: Tienda_Ropa_POO")
         print("3. Ejecutar programa: Tienda_Ropa_POO")
@@ -180,7 +185,8 @@ def menu_semana_6():
 def menu_semana_7():
     while True:
         # Impresión del menú de la semana 7
-        print("\nSemana 7: Constructores y Destructores")
+        print("\n***************************************** Unidad II *****************************************")
+        print("=========================== Semana 7: Constructores y Destructores ==========================")
         print("1. Mostrar Documentación del Tema")
         print("2. Mostrar código del programa: Constructores_Destructores")
         print("3. Ejecutar programa: Constructores_Destructores")
