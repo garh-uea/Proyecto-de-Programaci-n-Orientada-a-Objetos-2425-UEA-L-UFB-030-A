@@ -1,4 +1,4 @@
-# Importar de Bibliotecas necesarios
+# Importar Bibliotecas necesarias
 import os
 import subprocess
 import platform
